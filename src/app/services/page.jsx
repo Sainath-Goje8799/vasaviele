@@ -4,23 +4,113 @@ import Link from "next/link";
 
 const services = [
   {
-    title: "Bulb Installation & Repair",
-    desc: "LED, CFL, tube light installation and replacement.",
-    href: "/services/bulbs",
-    icon: "💡",
-  },
-  {
-    title: "Fan Installation",
-    desc: "Ceiling, exhaust, and wall fan services.",
-    href: "/services/fans",
-    icon: "🌀",
-  },
-  {
-    title: "House Wiring",
-    desc: "Complete wiring for homes and shops.",
-    href: "/services/wiring",
-    icon: "🏠",
-  },
+      title: "Bulb & Lighting Installation",
+      desc: "LED, CFL, tube lights, and decorative lighting installations.",
+      icon: "💡",
+      href: "/services/bulbs",
+    },
+    {
+      title: "Fan & Appliances Repair",
+      desc: "Ceiling fans, exhaust fans, and small electrical appliances repair.",
+      icon: "🌀",
+      href: "/services/fans",
+    },
+    {
+      title: "Wiring & Switchboards",
+      desc: "Complete home and office wiring, switchboard installation and maintenance.",
+      icon: "🏠",
+      href: "/services/wiring",
+    },
+    {
+      title: "MCB, RCCB & DB Installation",
+      desc: "Safety breakers, distribution boards installation and replacement.",
+      icon: "⚡",
+      href: "/services/mcb",
+    },
+    {
+      title: "Industrial Electrical Services",
+      desc: "Factory wiring, machines, panels, and industrial maintenance.",
+      icon: "🏭",
+      href: "/services/industrial",
+    },
+    {
+      title: "Outdoor & Street Lighting",
+      desc: "Street lights, flood lights, and outdoor lighting solutions.",
+      icon: "🌙",
+      href: "/services/outdoor",
+    },
+    {
+      title: "Solar Panel Installation",
+      desc: "Residential and commercial solar power solutions.",
+      icon: "☀️",
+      href: "/services/solar",
+    },
+    {
+      title: "Inverter & UPS Services",
+      desc: "Inverter installation, battery replacement, and UPS maintenance.",
+      icon: "🔋",
+      href: "/services/inverter",
+    },
+    {
+      title: "Panel Board Installation",
+      desc: "LT panels, control panels, and distribution panels.",
+      icon: "📊",
+      href: "/services/panels",
+    },
+    {
+      title: "Generator Installation & Service",
+      desc: "Generator wiring, installation, and periodic servicing.",
+      icon: "🔌",
+      href: "/services/generator",
+    },
+    {
+      title: "CCTV & Security Systems",
+      desc: "Camera installation, wiring, and surveillance setup.",
+      icon: "📷",
+      href: "/services/cctv",
+    },
+    {
+      title: "Smart Home Electricals",
+      desc: "Smart switches, lighting automation, and IoT solutions.",
+      icon: "📱",
+      href: "/services/smart-home",
+    },
+    {
+      title: "Decorative Lighting Setup",
+      desc: "False ceiling lights, garden lights, and festival lighting.",
+      icon: "✨",
+      href: "/services/decorative",
+    },
+    {
+      title: "Motor & Pump Installation",
+      desc: "Water pumps, motors installation and electrical connections.",
+      icon: "🚿",
+      href: "/services/motors",
+    },
+    {
+      title: "Earthing & Lightning Protection",
+      desc: "Earthing pits, lightning arresters, and safety solutions.",
+      icon: "🛡️",
+      href: "/services/earthing",
+    },
+    {
+      title: "Electrical Maintenance Contracts",
+      desc: "Annual maintenance for homes, shops, and industries.",
+      icon: "🛠️",
+      href: "/services/maintenance",
+    },
+    {
+      title: "Transformer Services",
+      desc: "Transformer installation, testing, and maintenance.",
+      icon: "🔄",
+      href: "/services/transformers",
+    },
+    {
+      title: "Emergency Electrical Services",
+      desc: "Quick fault fixing, short circuit and power failure support.",
+      icon: "🚨",
+      href: "/services/emergency",
+    }
 ];
 
 export default function Services() {
