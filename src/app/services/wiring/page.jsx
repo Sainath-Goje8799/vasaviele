@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import SearchBar from "@/components/SearchBar";
 const wiringItems = [
   {
     name: "House Wiring Cable (1.5 sq mm)",

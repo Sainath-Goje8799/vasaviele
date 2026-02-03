@@ -28,34 +28,10 @@ const services = [
       href: "/services/mcb",
     },
     {
-      title: "Industrial Electrical Services",
-      desc: "Factory wiring, machines, panels, and industrial maintenance.",
-      icon: "🏭",
-      href: "/services/industrial",
-    },
-    {
-      title: "Outdoor & Street Lighting",
-      desc: "Street lights, flood lights, and outdoor lighting solutions.",
-      icon: "🌙",
-      href: "/services/outdoor",
-    },
-    {
-      title: "Solar Panel Installation",
-      desc: "Residential and commercial solar power solutions.",
-      icon: "☀️",
-      href: "/services/solar",
-    },
-    {
       title: "Inverter & UPS Services",
       desc: "Inverter installation, battery replacement, and UPS maintenance.",
       icon: "🔋",
-      href: "/services/inverter",
-    },
-    {
-      title: "Panel Board Installation",
-      desc: "LT panels, control panels, and distribution panels.",
-      icon: "📊",
-      href: "/services/panels",
+      href: "/services/inverters",
     },
     {
       title: "Generator Installation & Service",
