@@ -70,23 +70,19 @@ const services = [
     href: "/services/earthing",
   },
   {
-    title: "Electrical Maintenance Contracts",
-    desc: "Annual maintenance for homes, shops, and industries.",
-    icon: "🛠️",
-    href: "/services/maintenance",
-  },
-  {
-    title: "Transformer Services",
-    desc: "Transformer installation, testing, and maintenance.",
-    icon: "🔄",
-    href: "/services/transformers",
-  },
-  {
     title: "Emergency Electrical Services",
     desc: "Quick fault fixing, short circuit and power failure support.",
     icon: "🚨",
     href: "/services/emergency",
   },
+  {
+    title: "Electrical Maintenance Contracts",
+    desc: "Annual maintenance for homes, shops, and industries.",
+    icon: "🛠️",
+    href: "/services/maintenance",
+  },
+
+  
 ];
 
 export default function Services() {
