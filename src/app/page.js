@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import image from "next/image";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
@@ -26,7 +27,6 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Hero Section */}
       {/* 🦸 Hero Section */}
       <section className="bg-gradient-to-br from-blue-700 to-indigo-800 text-white flex">
         <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">

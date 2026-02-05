@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -8,9 +9,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo / Brand */}
-        <Link href="/" className="text-2xl font-bold text-blue-600">
-          Sri Vasavi Electricals ⚡
-        </Link>
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-blue-600">
+        <Image
+              src="/logo/logo.png"
+              alt="Sri Vasavi Electricals Logo"
+              width={60}
+              height={60}
+              quality={100}
+              className="object-contain"
+              priority
+            />
+
+  Sri Vasavi Electricals ⚡
+</Link>
+
 
         {/* Navigation */}
         <nav className="hidden md:flex gap-6 font-medium">
