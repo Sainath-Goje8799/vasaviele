@@ -26,11 +26,35 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden md:flex gap-6 font-medium">
-          <Link href="/" className="hover:text-blue-600 text-black">Home</Link>
-          <Link href="/services" className="hover:text-blue-600 text-black">Services</Link>
-          <Link href="/about" className="hover:text-blue-600 text-black">About Us</Link>
-          <Link href="/chatapp" className="hover:text-blue-600 text-black">Chat</Link>
-        </nav>
+        <Link
+          href="/"
+          className="px-4 py-2 rounded-lg text-slate-800 hover:bg-amber-100 hover:text-amber-700 transition"
+        >
+          Home
+        </Link>
+
+        <Link
+          href="/services"
+          className="px-4 py-2 rounded-lg text-slate-800 hover:bg-amber-100 hover:text-amber-700 transition"
+        >
+          Services
+        </Link>
+
+        <Link
+          href="/about"
+          className="px-4 py-2 rounded-lg text-slate-800 hover:bg-amber-100 hover:text-amber-700 transition"
+        >
+          About Us
+        </Link>
+
+        <Link
+          href="/chatapp"
+          className="px-4 py-2 rounded-lg bg-amber-400 text-white hover:bg--500 transition shadow-sm"
+        >
+          Chat
+        </Link>
+      </nav>
+
 
         {/* Call Button */}
         <a

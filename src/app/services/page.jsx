@@ -81,52 +81,52 @@ const services = [
     icon: "🛠️",
     href: "/services/maintenance",
   },
-
-  
 ];
 
 export default function Services() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 px-4 py-16">
-      {/* Hero Section */}
-      <div className="max-w-5xl mx-auto text-center mb-16">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
-          Our Electrical Services ⚡
+    <main className="relative min-h-screen px-4 py-20 bg-gradient-to-br from-slate-50 via-amber-50 to-slate-100 overflow-hidden">
+
+         
+
+      
+      {/* ⚡ Hero */}
+      <div className="max-w-5xl mx-auto text-center mb-20">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
+          Our Electrical Services <span className="text-amber-400">⚡</span>
         </h1>
-        <p className="mt-4 text-gray-600 text-lg sm:text-xl">
-          Reliable solutions for home, office, and industry. Click a service to know more.
+        <p className="mt-5 text-slate-600 text-lg sm:text-xl">
+          Professional electrical solutions for homes, shops, offices, and
+          industries. Click a service to know more.
         </p>
       </div>
 
-      {/* Services Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* 🔌 Services Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
         {services.map((service, index) => (
           <Link
             key={index}
             href={service.href}
-            className="bg-white rounded-3xl shadow-lg p-6 flex flex-col items-start hover:scale-105 hover:shadow-2xl transition-transform duration-300"
+            className="group bg-white rounded-3xl shadow-md p-7 flex flex-col items-start
+                       hover:-translate-y-2 hover:shadow-2xl transition-all duration-300"
           >
-            <div className="text-5xl mb-4">{service.icon}</div>
-            <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
-            <p className="mt-2 text-gray-600 text-sm">{service.desc}</p>
-            <p className="mt-4 text-yellow-600 font-medium">View Details →</p>
+            <div className="text-5xl mb-5">{service.icon}</div>
+
+            <h3 className="text-xl font-semibold text-slate-800 group-hover:text-pink-500 transition">
+              {service.title}
+            </h3>
+
+            <p className="mt-3 text-slate-600 text-sm leading-relaxed">
+              {service.desc}
+            </p>
+
+            <span className="mt-6 inline-flex items-center gap-2 text-pink-500 font-semibold">
+              View Details
+              <span className="group-hover:translate-x-1 transition">→</span>
+            </span>
           </Link>
         ))}
       </div>
-
-      {/* CTA Section */}
-      {/* <div className="mt-16 text-center">
-        <h2 className="text-3xl font-bold text-gray-800">Need an Expert?</h2>
-        <p className="mt-2 text-gray-600 text-lg">
-          Contact us today and let our certified electricians handle your electrical needs safely and efficiently.
-        </p>
-        <Link
-          href="/contact"
-          className="mt-6 inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full transition"
-        >
-          Get in Touch
-        </Link>
-      </div> */}
     </main>
   );
 }
