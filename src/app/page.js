@@ -11,22 +11,7 @@ export default function HomePage() {
   return (
     <main className="relative min-h-screen bg-rose-50 font-sans">
 
-      {/* 🔝 Sticky Search Bar */}
-      <div className="sticky top-0 z-50 bg-white shadow-sm py-4 px-6">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <div className="relative w-full max-w-lg">
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search services..."
-              className="w-full pl-12 pr-4 py-3 rounded-full border border-rose-300 focus:outline-none focus:ring-2 focus:ring-pink-500 text-black"
-            />
-            <FaSearch className="absolute left-4 top-1/2 -translate-y-1/2 text-rose-400 text-lg" />
-          </div>
-        </div>
-      </div>
-
+      
       {/* 🦸 Hero Section */}
       <section className="bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 text-white">
         <div className="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-12 items-center">
