@@ -9,7 +9,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Logo / Brand */}
-        <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-blue-600">
+        <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-pink-400">
         <Image
               src="/logo/logo.png"
               alt="Sri Vasavi Electricals Logo"
@@ -34,11 +34,12 @@ export default function Header() {
 
         {/* Call Button */}
         <a
-          href="tel:9985227139"
-          className="px-4 py-2 bg-yellow-500 text-gray-900 rounded-lg font-semibold hover:bg-yellow-600 transition"
-        >
-          Call Now
-        </a>
+        href="tel:9985227139"
+        className="px-6 py-3 bg-white text-pink-600 font-semibold rounded-xl border border-pink-300 hover:bg-pink-100 transition"
+      >
+        Call Now
+      </a>
+
       </div>
     </header>
   );
