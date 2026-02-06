@@ -1,7 +1,8 @@
 "use client";
+
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
+
 
 const bulbs = [
   {
@@ -268,8 +269,9 @@ const bulbs = [
 
 export default function BulbsPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeBulb, setActiveBulb] = useState(null);
 
-  const categories = [
+   const categories = [
     "All",
     "Home",
     "Commercial",
@@ -283,19 +285,21 @@ export default function BulbsPage() {
   const filteredBulbs =
     selectedCategory === "All"
       ? bulbs
-      : bulbs.filter(
-          (bulb) => bulb.category === selectedCategory
-        );
+      : bulbs.filter((b) => b.category === selectedCategory);
 
   return (
-    // 👇 White background only for this page
     <div className="min-h-screen bg-white p-6">
-      <h1 className="text-3xl font-bold mb-6 text-gray-900">
-        Our Lighting Products
-      </h1>
 
-      {/* Category Buttons */}
-      <div className="flex gap-3 flex-wrap mb-6">
+      {/* Page Title */}
+      <h1 className="text-3xl font-bold text-gray-900 mb-2">
+        Lighting Products
+      </h1>
+      <p className="text-gray-600 mb-6">
+        Quality LED bulbs available at Sri Vasavi Electricals
+      </p>
+
+      {/* Category Filter */}
+      <div className="flex gap-3 flex-wrap mb-8">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -317,7 +321,8 @@ export default function BulbsPage() {
         {filteredBulbs.map((bulb, index) => (
           <div
             key={index}
-            className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition"
+            onClick={() => setActiveBulb(bulb)}
+            className="cursor-pointer bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition"
           >
             <Image
               src={bulb.img}
@@ -326,7 +331,7 @@ export default function BulbsPage() {
               height={200}
               className="mx-auto"
             />
-            <h3 className="text-lg font-semibold mt-3 text-gray-900">
+            <h3 className="text-lg font-semibold mt-3">
               {bulb.name}
             </h3>
             <p className="text-green-600 font-bold">
@@ -338,6 +343,132 @@ export default function BulbsPage() {
           </div>
         ))}
       </div>
+
+     {/* ULTRA PREMIUM PRODUCT VIEW */}
+{activeBulb && (
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4">
+
+    <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+      {/* Close */}
+      <button
+        onClick={() => setActiveBulb(null)}
+        className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
+      >
+        ✕
+      </button>
+
+      {/* TOP BRAND STRIP */}
+      <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-8 py-4 flex items-center justify-between">
+        <h2 className="text-xl font-bold text-gray-900">
+          Sri Vasavi Electricals ⚡
+        </h2>
+        <span className="text-sm font-semibold text-gray-800">
+          Trusted Electrical Store
+        </span>
+      </div>
+
+      {/* MAIN CONTENT */}
+      <div className="grid lg:grid-cols-2 gap-12 p-10">
+
+        {/* IMAGE SHOWCASE */}
+        <div className="flex items-center justify-center">
+          <div className="relative bg-gradient-to-br from-violet-500 to-pink-600 rounded-2xl p-10 shadow-inner">
+            <Image
+              src={activeBulb.img}
+              alt={activeBulb.name}
+              width={420}
+              height={420}
+              className="rounded-xl transition-transform duration-300 hover:scale-105"
+            />
+
+            {/* Badge */}
+            <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+              Best Seller
+            </span>
+          </div>
+        </div>
+
+        {/* PRODUCT INFO */}
+        <div>
+          <h1 className="text-3xl font-bold text-gray-900">
+            {activeBulb.name}
+          </h1>
+
+          <p className="mt-2 text-gray-500">
+            High-quality lighting solution for home & commercial use
+          </p>
+
+          {/* Price */}
+          <div className="mt-5 flex items-center gap-4">
+            <span className="text-4xl font-extrabold text-green-600">
+              {activeBulb.price}
+            </span>
+            <span className="text-sm text-gray-500">
+              (Inclusive of taxes)
+            </span>
+          </div>
+
+          {/* Description */}
+          <p className="mt-6 text-amber-400 leading-relaxed">
+            {activeBulb.desc}
+          </p>
+
+          {/* FEATURES GRID */}
+          <div className="mt-8">
+            <h3 className="text-lg font-semibold mb-4 text-red-400">
+              Specifications & Features
+            </h3>
+            <div className="grid grid-cols-2 gap-3 text-green-800">
+              {activeBulb.details.map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm font-medium"
+                >
+                  <span className="text-green-600">✔</span>
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA BAR */}
+          <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 items-center justify-between">
+            <div className="text-sm text-pink-600">
+              📍 Available at our Mudhole store  
+              <br />
+              ⏰ Same-day service & support
+            </div>
+
+            <div className="flex gap-3">
+              <a
+                href="tel:9985227139"
+                className="px-6 py-3 bg-yellow-500 rounded-xl font-semibold hover:bg-yellow-600 transition"
+              >
+                📞 Call Now
+              </a>
+
+              <a
+                href="https://wa.me/919985227139"
+                target="_blank"
+                className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition"
+              >
+                💬 WhatsApp
+              </a>
+            </div>
+          </div>
+
+          {/* TRUST */}
+          <p className="mt-6 text-xs text-gray-500">
+            ✔ 6+ years experience • ✔ Genuine products • ✔ Trusted local electrical store
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
+
     </div>
   );
 }

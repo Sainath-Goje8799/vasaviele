@@ -10,6 +10,13 @@ const decorativeItems = [
     img: "/decorative/LED Decorative Bulb.jpg",
     category: "Lighting",
     desc: "Warm LED decorative bulb for homes.",
+    highlights: [
+      "Energy-efficient LED",
+      "Warm white glow",
+      "Long lifespan (~25,000 hours)",
+      "Easy to install in standard sockets",
+    ],
+    use: "Living rooms • Bedrooms • Dining areas",
   },
   {
     name: "Vintage Filament Bulb",
@@ -17,6 +24,13 @@ const decorativeItems = [
     img: "/decorative/Vintage Filament Bulb.jpg",
     category: "Lighting",
     desc: "Classic filament bulb for decorative use.",
+    highlights: [
+      "Vintage-style filament",
+      "Soft warm light",
+      "Perfect for aesthetic lighting",
+      "Compatible with dimmers",
+    ],
+    use: "Cafes • Living rooms • Restaurants",
   },
   {
     name: "LED Strip Light (Warm White)",
@@ -24,6 +38,13 @@ const decorativeItems = [
     img: "/decorative/LED Strip Light (Warm White).jpg",
     category: "LED Strips",
     desc: "Flexible LED strip for false ceiling.",
+    highlights: [
+      "Flexible and easy to install",
+      "Warm white ambient light",
+      "Low power consumption",
+      "Water-resistant coating",
+    ],
+    use: "False ceilings • Under cabinets • Cove lighting",
   },
   {
     name: "RGB LED Strip Light",
@@ -31,6 +52,13 @@ const decorativeItems = [
     img: "/decorative/RGB LED Strip Light.jpg",
     category: "LED Strips",
     desc: "Color-changing LED strip with controller.",
+    highlights: [
+      "16 million colors via app/remote",
+      "Sync with music & modes",
+      "Flexible design for curves",
+      "Timer and scheduling options",
+    ],
+    use: "Living rooms • Gaming rooms • Party decor",
   },
   {
     name: "Wall Decorative Light",
@@ -38,6 +66,13 @@ const decorativeItems = [
     img: "/decorative/Wall Decorative Light.jpg",
     category: "Wall Lights",
     desc: "Modern wall-mounted decorative light.",
+    highlights: [
+      "Stylish modern design",
+      "Ambient soft lighting",
+      "Energy-efficient LED",
+      "Durable build",
+    ],
+    use: "Hallways • Bedrooms • Living areas",
   },
   {
     name: "Outdoor Wall Light",
@@ -45,6 +80,13 @@ const decorativeItems = [
     img: "/decorative/Outdoor Wall Light.jpg",
     category: "Wall Lights",
     desc: "Weatherproof outdoor decorative light.",
+    highlights: [
+      "IP65 waterproof rating",
+      "Durable aluminum body",
+      "Soft warm outdoor light",
+      "Easy wall mount installation",
+    ],
+    use: "Porches • Gardens • Pathways",
   },
   {
     name: "Chandelier Light",
@@ -52,6 +94,13 @@ const decorativeItems = [
     img: "/decorative/Chandelier Light.jpg",
     category: "Ceiling Lights",
     desc: "Elegant chandelier for living rooms.",
+    highlights: [
+      "Premium crystal design",
+      "Multi-light LED bulbs",
+      "Perfect for high ceilings",
+      "Adds elegance and luxury",
+    ],
+    use: "Living rooms • Dining halls • Banquet areas",
   },
   {
     name: "Pendant Ceiling Light",
@@ -59,6 +108,13 @@ const decorativeItems = [
     img: "/decorative/Pendant Ceiling Light.jpg",
     category: "Ceiling Lights",
     desc: "Stylish hanging pendant light.",
+    highlights: [
+      "Modern pendant design",
+      "Adjustable hanging height",
+      "Soft warm illumination",
+      "Energy-efficient LED",
+    ],
+    use: "Dining areas • Kitchen islands • Workspaces",
   },
   {
     name: "LED Panel Light",
@@ -66,6 +122,13 @@ const decorativeItems = [
     img: "/decorative/LED Panel Light.jpg",
     category: "Ceiling Lights",
     desc: "Slim LED panel for modern interiors.",
+    highlights: [
+      "Slim and sleek design",
+      "Uniform soft white light",
+      "Low energy consumption",
+      "Ideal for office and home",
+    ],
+    use: "Offices • Kitchens • Living rooms",
   },
   {
     name: "Mirror Decorative Light",
@@ -73,6 +136,13 @@ const decorativeItems = [
     img: "/decorative/Mirror Decorative Light.jpg",
     category: "Bathroom Lights",
     desc: "Mirror light for bathrooms and dressing areas.",
+    highlights: [
+      "Moisture-resistant",
+      "Soft warm lighting",
+      "Elegant design with LED",
+      "Easy mounting above mirrors",
+    ],
+    use: "Bathrooms • Dressing tables • Salons",
   },
   {
     name: "Garden Spike Light",
@@ -80,6 +150,13 @@ const decorativeItems = [
     img: "/decorative/Garden Spike Light.jpg",
     category: "Outdoor",
     desc: "Spike light for garden decoration.",
+    highlights: [
+      "IP65 weatherproof",
+      "Durable aluminum body",
+      "Soft decorative illumination",
+      "Easy to position in soil",
+    ],
+    use: "Gardens • Pathways • Landscaping",
   },
   {
     name: "Decorative Rope Light",
@@ -87,6 +164,13 @@ const decorativeItems = [
     img: "/decorative/Decorative Rope Light.jpg",
     category: "LED Strips",
     desc: "Flexible rope light for festivals.",
+    highlights: [
+      "Flexible and bendable",
+      "Water-resistant PVC coating",
+      "Multicolor options",
+      "Perfect for festive decoration",
+    ],
+    use: "Festivals • Parties • Outdoor decoration",
   },
   {
     name: "Festoon Light (10 Bulbs)",
@@ -94,6 +178,13 @@ const decorativeItems = [
     img: "/decorative/Festoon Light (10 Bulbs).jpg",
     category: "Outdoor",
     desc: "Decorative festoon lighting for events.",
+    highlights: [
+      "10 hanging bulbs included",
+      "Durable PVC cable",
+      "Ideal for parties and events",
+      "Easy to hang and connect",
+    ],
+    use: "Weddings • Parties • Outdoor decor",
   },
   {
     name: "Decorative Table Lamp",
@@ -101,6 +192,13 @@ const decorativeItems = [
     img: "/decorative/Decorative Table Lamp.jpg",
     category: "Indoor Decor",
     desc: "Stylish table lamp for bedrooms.",
+    highlights: [
+      "Compact and elegant design",
+      "Soft warm glow",
+      "Energy-efficient LED",
+      "Perfect for bedside or study",
+    ],
+    use: "Bedrooms • Study tables • Living rooms",
   },
   {
     name: "Decorative Floor Lamp",
@@ -108,11 +206,19 @@ const decorativeItems = [
     img: "/decorative/Decorative Floor Lamp.jpg",
     category: "Indoor Decor",
     desc: "Tall floor lamp with soft lighting.",
+    highlights: [
+      "Elegant tall design",
+      "Soft ambient illumination",
+      "Sturdy base",
+      "Adds style to interiors",
+    ],
+    use: "Living rooms • Bedrooms • Reading corners",
   },
 ];
 
 export default function DecorativePage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeItem, setActiveItem] = useState(null); // Full-screen modal
 
   const categories = [
     "All",
@@ -129,9 +235,7 @@ export default function DecorativePage() {
   const filteredItems =
     selectedCategory === "All"
       ? decorativeItems
-      : decorativeItems.filter(
-          (item) => item.category === selectedCategory
-        );
+      : decorativeItems.filter((item) => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-white p-6">
@@ -162,25 +266,131 @@ export default function DecorativePage() {
         {filteredItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition"
+            onClick={() => setActiveItem(item)}
+            className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition cursor-pointer"
           >
-            <img
+            <Image
               src={item.img}
               alt={item.name}
-              className="mx-auto h-40 object-contain"
+              width={200}
+              height={200}
+              className="mx-auto object-contain"
             />
             <h3 className="text-lg font-semibold mt-3 text-black">
               {item.name}
             </h3>
-            <p className="text-green-600 font-bold">
-              {item.price}
-            </p>
-            <p className="text-sm text-gray-600">
-              {item.desc}
-            </p>
+            <p className="text-green-600 font-bold">{item.price}</p>
+            <p className="text-sm text-gray-600">{item.desc}</p>
           </div>
         ))}
       </div>
+
+      {/* 🔥 Full-screen Modal */}
+      {activeItem && (
+        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4">
+          <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+            {/* Close Button */}
+            <button
+              onClick={() => setActiveItem(null)}
+              className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
+            >
+              ✕
+            </button>
+
+            {/* Top Brand Strip */}
+            <div className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 px-8 py-4 flex items-center justify-between">
+              <h2 className="text-xl font-bold text-white">
+                Sri Vasavi Electricals ⚡
+              </h2>
+              <span className="text-sm font-semibold text-white/90">
+                Premium Decorative Lighting
+              </span>
+            </div>
+
+            {/* Main Content */}
+            <div className="grid lg:grid-cols-2 gap-12 p-10">
+
+              {/* Image Showcase */}
+              <div className="flex items-center justify-center">
+                <div className="relative bg-gradient-to-br from-yellow-500 to-orange-700 rounded-2xl p-10 shadow-inner">
+                  <Image
+                    src={activeItem.img}
+                    alt={activeItem.name}
+                    width={420}
+                    height={420}
+                    className="rounded-xl transition-transform duration-300 hover:scale-105"
+                  />
+                  <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                    Premium Quality
+                  </span>
+                </div>
+              </div>
+
+              {/* Product Info */}
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">
+                  {activeItem.name}
+                </h1>
+                <p className="mt-2 text-gray-500">{activeItem.desc}</p>
+
+                {/* Price */}
+                <div className="mt-5 flex items-center gap-4">
+                  <span className="text-4xl font-extrabold text-orange-600">
+                    {activeItem.price}
+                  </span>
+                  <span className="text-sm text-gray-500">(Inclusive of taxes)</span>
+                </div>
+
+                {/* Highlights */}
+                {activeItem.highlights && (
+                  <div className="mt-6">
+                    <h3 className="text-lg font-semibold mb-4 text-orange-600">
+                      Key Highlights
+                    </h3>
+                    <ul className="list-disc list-inside text-gray-700">
+                      {activeItem.highlights.map((h, i) => (
+                        <li key={i}>{h}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* CTA Bar */}
+                <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 items-center justify-between">
+                  <div className="text-sm text-gray-600">
+                    📍 Available at our Mudhole store  
+                    <br />
+                    ⚡ Professional installation support
+                  </div>
+
+                  <div className="flex gap-3">
+                    <a
+                      href="tel:9985227139"
+                      className="px-6 py-3 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition"
+                    >
+                      📞 Call Now
+                    </a>
+
+                    <a
+                      href="https://wa.me/919985227139"
+                      target="_blank"
+                      className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition"
+                    >
+                      💬 WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                {/* Trust */}
+                <p className="mt-6 text-xs text-gray-500">
+                  ✔ Premium Quality • ✔ Fire Resistant • ✔ Trusted Local Store
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

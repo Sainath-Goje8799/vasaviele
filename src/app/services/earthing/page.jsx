@@ -11,6 +11,19 @@ const earthingItems = [
     img: "/earthing/Copper Earthing Rod.jpg",
     category: "Earthing Rods",
     desc: "High conductivity copper earthing rod for safety.",
+    tag: "ISI Approved",
+    features: [
+      "High conductivity copper",
+      "Corrosion resistant",
+      "Long lifespan",
+      "Easy installation",
+    ],
+    specs: [
+      "Length: 2.5 m",
+      "Diameter: 16 mm",
+      "Material: Pure Copper",
+      "Suitable for residential & commercial use",
+    ],
   },
   {
     name: "GI Earthing Rod",
@@ -18,6 +31,17 @@ const earthingItems = [
     img: "/earthing/GI Earthing Rod.jpg",
     category: "Earthing Rods",
     desc: "Galvanized iron earthing rod for long life.",
+    tag: "ISI Approved",
+    features: [
+      "Galvanized iron for durability",
+      "Cost-effective solution",
+      "Corrosion resistant",
+    ],
+    specs: [
+      "Length: 2.5 m",
+      "Diameter: 16 mm",
+      "Material: Galvanized Iron",
+    ],
   },
   {
     name: "Copper Earthing Plate",
@@ -25,6 +49,17 @@ const earthingItems = [
     img: "/earthing/Copper Earthing Plate.jpg",
     category: "Earthing Plates",
     desc: "Pure copper earthing plate for residential use.",
+    tag: "ISI Approved",
+    features: [
+      "High conductivity copper plate",
+      "Durable & corrosion resistant",
+      "Easy grounding connection",
+    ],
+    specs: [
+      "Size: 600 x 600 mm",
+      "Thickness: 3 mm",
+      "Material: Pure Copper",
+    ],
   },
   {
     name: "GI Earthing Plate",
@@ -32,6 +67,17 @@ const earthingItems = [
     img: "/earthing/GI Earthing Plate.jpg",
     category: "Earthing Plates",
     desc: "GI earthing plate suitable for industrial earthing.",
+    tag: "ISI Approved",
+    features: [
+      "Galvanized iron plate",
+      "Long-lasting and sturdy",
+      "Resistant to corrosion",
+    ],
+    specs: [
+      "Size: 600 x 600 mm",
+      "Thickness: 3 mm",
+      "Material: GI Steel",
+    ],
   },
   {
     name: "Earthing Wire (8 SWG)",
@@ -39,6 +85,12 @@ const earthingItems = [
     img: "/earthing/Earthing Wire (8 SWG).jpg",
     category: "Earthing Wires",
     desc: "Heavy gauge earthing wire for grounding systems.",
+    features: [
+      "8 SWG copper wire",
+      "High conductivity",
+      "Durable insulation",
+    ],
+    specs: ["Length: As per requirement", "Material: Copper", "Color: Green"],
   },
   {
     name: "Earthing Wire (10 SWG)",
@@ -46,6 +98,12 @@ const earthingItems = [
     img: "/earthing/Earthing Wire (10 SWG).jpg",
     category: "Earthing Wires",
     desc: "Copper earthing wire for domestic installations.",
+    features: [
+      "10 SWG copper wire",
+      "Corrosion resistant",
+      "Flexible for easy installation",
+    ],
+    specs: ["Length: As per requirement", "Material: Copper", "Color: Green"],
   },
   {
     name: "Earthing Clamp",
@@ -53,6 +111,12 @@ const earthingItems = [
     img: "/earthing/Earthing Clamp.jpg",
     category: "Accessories",
     desc: "Strong clamp for earthing wire connections.",
+    features: [
+      "Durable brass construction",
+      "Secure wire connection",
+      "Corrosion resistant",
+    ],
+    specs: ["Material: Brass", "Screws included", "Fits 8-10 SWG wire"],
   },
   {
     name: "Chemical Earthing Compound",
@@ -60,13 +124,26 @@ const earthingItems = [
     img: "/earthing/Chemical Earthing Compound.jpg",
     category: "Accessories",
     desc: "Reduces earth resistance and improves conductivity.",
+    features: [
+      "Enhances soil conductivity",
+      "Reduces earth resistance",
+      "Long-lasting performance",
+    ],
+    specs: ["Weight: 2 kg pack", "Usage: One rod/plate", "Non-toxic formula"],
   },
-   {
+  {
     name: "Maintenance-Free Earthing Electrode",
     price: "₹3,800",
     img: "/earthing/Maintenance-Free Earthing Electrode.jpg",
     category: "Earthing Rods",
     desc: "Long-life maintenance-free earthing electrode.",
+    tag: "Maintenance-Free",
+    features: [
+      "No maintenance required",
+      "High conductivity copper coating",
+      "Corrosion-resistant steel core",
+    ],
+    specs: ["Length: 2.5 m", "Diameter: 20 mm", "Material: Copper-coated steel"],
   },
   {
     name: "Chemical Earthing Pipe",
@@ -74,6 +151,12 @@ const earthingItems = [
     img: "/earthing/Chemical Earthing Pipe.jpg",
     category: "Earthing Rods",
     desc: "Perforated pipe for chemical earthing systems.",
+    features: [
+      "Perforated GI pipe",
+      "Holds chemical earthing compounds",
+      "Improves soil conductivity",
+    ],
+    specs: ["Length: 2 m", "Diameter: 50 mm", "Material: Galvanized Steel"],
   },
   {
     name: "Copper Bonded Earthing Rod",
@@ -81,6 +164,12 @@ const earthingItems = [
     img: "/earthing/Copper Bonded Earthing Rod.jpg",
     category: "Earthing Rods",
     desc: "Steel core rod with copper bonding for durability.",
+    features: [
+      "Steel core with 99.9% copper coating",
+      "Long lifespan",
+      "ISI certified",
+    ],
+    specs: ["Length: 2.5 m", "Diameter: 16 mm", "Material: Copper-bonded Steel"],
   },
   {
     name: "Earth Pit Chamber (FRP)",
@@ -88,6 +177,12 @@ const earthingItems = [
     img: "/earthing/Earth Pit Chamber (FRP).jpg",
     category: "Accessories",
     desc: "FRP earth pit chamber with removable cover.",
+    features: [
+      "Durable FRP construction",
+      "Removable cover",
+      "UV-resistant material",
+    ],
+    specs: ["Dimensions: 400x400x500 mm", "Material: FRP", "Color: Grey"],
   },
   {
     name: "Earth Pit Chamber (Concrete)",
@@ -95,6 +190,12 @@ const earthingItems = [
     img: "/earthing/Earth Pit Chamber (Concrete).jpg",
     category: "Accessories",
     desc: "Heavy-duty concrete chamber for earthing pits.",
+    features: [
+      "Concrete reinforced",
+      "Strong & durable",
+      "Weather resistant",
+    ],
+    specs: ["Dimensions: 400x400x500 mm", "Material: Concrete", "Color: Grey"],
   },
   {
     name: "Earthing Test Link",
@@ -102,6 +203,12 @@ const earthingItems = [
     img: "/earthing/Earthing Test Link.jpg",
     category: "Accessories",
     desc: "Test link for checking earth resistance.",
+    features: [
+      "Easy to install",
+      "Reliable testing tool",
+      "Durable construction",
+    ],
+    specs: ["Material: Brass", "Fits standard rods", "Size: 50 mm"],
   },
   {
     name: "Earth Bus Bar (Copper)",
@@ -109,6 +216,12 @@ const earthingItems = [
     img: "/earthing/Earth Bus Bar (Copper).jpg",
     category: "Accessories",
     desc: "Copper earth bus bar for panel earthing.",
+    features: [
+      "High conductivity copper",
+      "Pre-drilled holes for mounting",
+      "Durable & corrosion resistant",
+    ],
+    specs: ["Length: 1 m", "Width: 50 mm", "Thickness: 6 mm", "Material: Copper"],
   },
   {
     name: "Lightning Arrester Spike",
@@ -116,6 +229,12 @@ const earthingItems = [
     img: "/earthing/Lightning Arrester Spike.jpg",
     category: "Accessories",
     desc: "Spike-type lightning arrester for buildings.",
+    features: [
+      "Protects from lightning surges",
+      "Durable stainless steel",
+      "Easy installation",
+    ],
+    specs: ["Height: 600 mm", "Material: Stainless Steel", "Color: Silver"],
   },
   {
     name: "Earth Enhancement Compound",
@@ -123,11 +242,19 @@ const earthingItems = [
     img: "/earthing/Earth Enhancement Compound.jpg",
     category: "Accessories",
     desc: "Improves soil conductivity and lowers resistance.",
+    features: [
+      "Improves soil conductivity",
+      "Reduces earth resistance",
+      "Long-lasting performance",
+    ],
+    specs: ["Weight: 2 kg pack", "Non-toxic", "For residential & commercial use"],
   },
 ];
 
+
 export default function EarthingPage() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [activeItem, setActiveItem] = useState(null); // modal
 
   const categories = [
     "All",
@@ -140,9 +267,7 @@ export default function EarthingPage() {
   const filteredItems =
     selectedCategory === "All"
       ? earthingItems
-      : earthingItems.filter(
-          (item) => item.category === selectedCategory
-        );
+      : earthingItems.filter((item) => item.category === selectedCategory);
 
   return (
     <div className="min-h-screen bg-white p-6">
@@ -161,12 +286,11 @@ export default function EarthingPage() {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-4 py-2 rounded-full border transition
-              ${
-                selectedCategory === cat
-                  ? "bg-black text-white"
-                  : "bg-white text-black hover:bg-gray-100"
-              }`}
+            className={`px-4 py-2 rounded-full border transition ${
+              selectedCategory === cat
+                ? "bg-black text-white"
+                : "bg-white text-black hover:bg-gray-100"
+            }`}
           >
             {cat}
           </button>
@@ -178,7 +302,8 @@ export default function EarthingPage() {
         {filteredItems.map((item, index) => (
           <div
             key={index}
-            className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition"
+            className="bg-white border rounded-lg p-4 shadow-sm hover:shadow-lg transition cursor-pointer"
+            onClick={() => setActiveItem(item)}
           >
             <Image
               src={item.img}
@@ -190,15 +315,140 @@ export default function EarthingPage() {
             <h3 className="text-lg font-semibold mt-3 text-black">
               {item.name}
             </h3>
-            <p className="text-green-600 font-bold">
-              {item.price}
-            </p>
-            <p className="text-sm text-gray-600">
-              {item.desc}
-            </p>
+            <p className="text-green-600 font-bold">{item.price}</p>
+            <p className="text-sm text-gray-600">{item.desc}</p>
           </div>
         ))}
       </div>
+
+      {/* FULL SCREEN MODAL */}
+      {activeItem && (
+        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4 overflow-auto">
+          <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+
+            {/* CLOSE */}
+            <button
+              onClick={() => setActiveItem(null)}
+              className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
+            >
+              ✕
+            </button>
+
+            {/* TOP STRIP */}
+            <div className="bg-gradient-to-r from-slate-700 via-gray-800 to-black px-8 py-4 flex items-center justify-between">
+              <h2 className="text-xl font-bold text-white">
+                Sri Vasavi Electricals ⚡
+              </h2>
+              <span className="text-sm font-semibold text-white/80">
+                Earthing & Grounding
+              </span>
+            </div>
+
+            {/* CONTENT */}
+            <div className="grid lg:grid-cols-2 gap-12 p-10">
+
+              {/* IMAGE */}
+              <div className="flex items-center justify-center">
+                <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-10 shadow-inner">
+                  <Image
+                    src={activeItem.img}
+                    alt={activeItem.name}
+                    width={420}
+                    height={420}
+                    className="rounded-xl hover:scale-105 transition"
+                  />
+                  {activeItem.tag && (
+                    <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                      {activeItem.tag}
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* INFO */}
+              <div>
+                <h1 className="text-3xl font-bold text-gray-900">
+                  {activeItem.name}
+                </h1>
+                <p className="mt-2 text-gray-500">{activeItem.desc}</p>
+
+                <div className="mt-5 flex items-center gap-4">
+                  <span className="text-4xl font-extrabold text-gray-800">
+                    {activeItem.price}
+                  </span>
+                  <span className="text-sm text-gray-500">
+                    (Inclusive of taxes)
+                  </span>
+                </div>
+
+                {/* FEATURES */}
+                {activeItem.features && (
+                  <div className="mt-8">
+                    <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                      Key Features
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3 text-gray-600">
+                      {activeItem.features.map((f, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm"
+                        >
+                          <span className="text-green-600">✔</span>
+                          {f}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* SPECS */}
+                {activeItem.specs && (
+                  <div className="mt-8">
+                    <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                      Technical Specs
+                    </h3>
+                    <ul className="list-disc pl-5 text-gray-600">
+                      {activeItem.specs.map((s, i) => (
+                        <li key={i}>{s}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* CTA */}
+                <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 justify-between">
+                  <div className="text-sm text-gray-600">
+                    📍 Mudhole Store  
+                    <br />
+                    ⚡ Installation guidance available
+                  </div>
+
+                  <div className="flex gap-3">
+                    <a
+                      href="tel:9985227139"
+                      className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-black"
+                    >
+                      📞 Call Now
+                    </a>
+
+                    <a
+                      href="https://wa.me/919985227139"
+                      target="_blank"
+                      className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
+                    >
+                      💬 WhatsApp
+                    </a>
+                  </div>
+                </div>
+
+                <p className="mt-6 text-xs text-gray-500">
+                  ✔ Trusted local store • ✔ Quality earthing solutions
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

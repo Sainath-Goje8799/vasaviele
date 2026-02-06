@@ -39,13 +39,13 @@ const fancyBtn =
           <Link href="/about" className={navLinkStyle}>About Us</Link>
           <Link href="/chatapp" className={navLinkStyle}>Chat</Link>
 
-          <Link href="/login" className={`${fancyBtn} text-blue-600 border border-blue-500 text-center`}>
+          {/* <Link href="/login" className={`${fancyBtn} text-blue-600 border border-blue-500 text-center`}>
               Login
             </Link>
 
             <Link href="/signup" className={`${fancyBtn} bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-center`}>
               Sign Up
-            </Link>
+            </Link> */}
 
             <a href="tel:9985227139" className={`${fancyBtn} bg-gradient-to-r from-pink-500 to-rose-500 text-white text-center`}>
               Call Now
