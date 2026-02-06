@@ -283,111 +283,139 @@ export default function EmergencyElectricalPage() {
       </div>
 
       {/* Full Screen Modal */}
-      {/* Full Screen Modal */}
-      {activeService && (
-        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4">
-          <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+{activeService && (
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-start sm:items-center justify-center px-3 sm:px-4 overflow-y-auto">
+    
+    <div className="relative w-full max-w-6xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden my-6">
 
-            {/* CLOSE BUTTON */}
-            <button
-              onClick={() => setActiveService(null)}
-              className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
-            >
-              ✕
-            </button>
+      {/* CLOSE BUTTON */}
+      <button
+        onClick={() => setActiveService(null)}
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/80 text-white text-lg sm:text-xl flex items-center justify-center hover:scale-110 transition"
+      >
+        ✕
+      </button>
 
-            {/* TOP STRIP */}
-            <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 px-8 py-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold text-white">Sri Vasavi Electricals ⚡</h2>
-              <span className="text-sm font-semibold text-white/80">{activeService.category}</span>
-            </div>
+      {/* TOP STRIP */}
+      <div className="bg-gradient-to-r from-red-600 via-red-700 to-red-800 px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
+        <h2 className="text-base sm:text-xl font-bold text-white">
+          Sri Vasavi Electricals ⚡
+        </h2>
+        <span className="text-xs sm:text-sm font-semibold text-white/80">
+          {activeService.category}
+        </span>
+      </div>
 
-            {/* CONTENT */}
-            <div className="grid lg:grid-cols-2 gap-12 p-10">
-              {/* IMAGE */}
-              <div className="flex items-center justify-center">
-                <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-10 shadow-inner">
-                  <Image
-                    src={activeService.img}
-                    alt={activeService.name}
-                    width={420}
-                    height={420}
-                    className="rounded-xl hover:scale-105 transition"
-                  />
-                  {activeService.tag && (
-                    <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                      {activeService.tag}
-                    </span>
-                  )}
-                </div>
-              </div>
+      {/* CONTENT */}
+      <div className="grid lg:grid-cols-2 gap-6 sm:gap-12 p-4 sm:p-10">
 
-              {/* INFO */}
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">{activeService.name}</h1>
-                <p className="mt-2 text-gray-500">{activeService.desc}</p>
+        {/* IMAGE */}
+        <div className="flex items-center justify-center">
+          <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-xl sm:rounded-2xl p-4 sm:p-10 shadow-inner">
+            <Image
+              src={activeService.img}
+              alt={activeService.name}
+              width={420}
+              height={420}
+              className="rounded-lg sm:rounded-xl w-56 sm:w-auto h-auto"
+            />
 
-                <div className="mt-5 flex items-center gap-4">
-                  <span className="text-4xl font-extrabold text-gray-800">{activeService.price}</span>
-                  <span className="text-sm text-gray-500">(Approximate / On-site)</span>
-                </div>
-
-                {/* FEATURES */}
-                {activeService.features && (
-                  <div className="mt-8">
-                    <h3 className="text-lg font-semibold mb-4 text-gray-800">Key Highlights & Features</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-600">
-                      {activeService.features.map((f, i) => (
-                        <div key={i} className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm">
-                          <span className="text-red-600">✔</span> {f}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* SPECIFICATIONS */}
-                {activeService.specs && (
-                  <div className="mt-8">
-                    <h3 className="text-lg font-semibold mb-4 text-gray-800">Technical Specifications</h3>
-                    <ul className="list-disc list-inside text-gray-600 space-y-2">
-                      {activeService.specs.map((s, i) => (
-                        <li key={i}>{s}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* CTA BUTTONS */}
-                <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 justify-between">
-                  <div className="text-sm text-gray-600">
-                    📍 Mudhole Store<br />⚡ 24/7 Emergency Electrical Assistance
-                  </div>
-                  <div className="flex gap-3">
-                    <a
-                      href="tel:9985227139"
-                      className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-black"
-                    >
-                      📞 Call Now
-                    </a>
-                    <a
-                      href="https://wa.me/919985227139"
-                      target="_blank"
-                      className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
-                    >
-                      💬 WhatsApp
-                    </a>
-                  </div>
-                </div>
-
-                <p className="mt-6 text-xs text-gray-500">
-                  ✔ Rapid Response • ✔ Certified Electricians • ✔ Trusted Local Store
-                </p>
-              </div>
-            </div>
+            {activeService.tag && (
+              <span className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-green-600 text-white text-[10px] sm:text-xs px-2 sm:px-3 py-1 rounded-full font-semibold">
+                {activeService.tag}
+              </span>
+            )}
           </div>
         </div>
-      )}
+
+        {/* INFO */}
+        <div>
+          <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
+            {activeService.name}
+          </h1>
+
+          <p className="mt-2 text-sm sm:text-base text-gray-500">
+            {activeService.desc}
+          </p>
+
+          <div className="mt-4 sm:mt-5 flex flex-wrap items-center gap-3 sm:gap-4">
+            <span className="text-2xl sm:text-4xl font-extrabold text-gray-800">
+              {activeService.price}
+            </span>
+            <span className="text-xs sm:text-sm text-gray-500">
+              (Approximate / On-site)
+            </span>
+          </div>
+
+          {/* FEATURES */}
+          {activeService.features && (
+            <div className="mt-6 sm:mt-8">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">
+                Key Highlights & Features
+              </h3>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-gray-600">
+                {activeService.features.map((f, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 bg-gray-50 border rounded-xl px-3 sm:px-4 py-2 sm:py-3 text-xs sm:text-sm"
+                  >
+                    <span className="text-red-600">✔</span>
+                    {f}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* SPECIFICATIONS */}
+          {activeService.specs && (
+            <div className="mt-6 sm:mt-8">
+              <h3 className="text-base sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">
+                Technical Specifications
+              </h3>
+              <ul className="list-disc list-inside text-xs sm:text-sm text-gray-600 space-y-2">
+                {activeService.specs.map((s, i) => (
+                  <li key={i}>{s}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* CTA BUTTONS */}
+          <div className="mt-8 sm:mt-10 p-4 sm:p-6 bg-gray-50 border rounded-2xl flex flex-col sm:flex-row gap-4 justify-between">
+            <div className="text-xs sm:text-sm text-gray-600">
+              📍 Mudhole Store<br />
+              ⚡ 24/7 Emergency Electrical Assistance
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+              <a
+                href="tel:9985227139"
+                className="w-full sm:w-auto px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold text-center"
+              >
+                📞 Call Now
+              </a>
+
+              <a
+                href="https://wa.me/919985227139"
+                target="_blank"
+                className="w-full sm:w-auto px-6 py-3 bg-green-600 text-white rounded-xl font-semibold text-center"
+              >
+                💬 WhatsApp
+              </a>
+            </div>
+          </div>
+
+          <p className="mt-4 sm:mt-6 text-[10px] sm:text-xs text-gray-500">
+            ✔ Rapid Response • ✔ Certified Electricians • ✔ Trusted Local Store
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
     </div>
   );
 }
