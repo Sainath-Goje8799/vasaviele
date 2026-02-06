@@ -63,7 +63,7 @@ const fancyBtn =
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          className="md:hidden p-2 rounded-lg hover:bg-gray-100 text-gray-600"
           onClick={() => setOpen(!open)}
         >
           {open ? <X size={26} /> : <Menu size={26} />}
@@ -78,15 +78,16 @@ const fancyBtn =
             <Link onClick={() => setOpen(false)} href="/" className={navLinkStyle}>Home</Link>
             <Link onClick={() => setOpen(false)} href="/services" className={navLinkStyle}>Services</Link>
             <Link onClick={() => setOpen(false)} href="/about" className={navLinkStyle}>About Us</Link>
-          <a
+          {/* <a
             href="https://wa.me/919985227139"
             target="_blank"
+            className="text-black"
             
           >
           Chat
-          </a>
+          </a> */}
 
-            {/* <Link onClick={() => setOpen(false)} href="/chatapp" className={navLinkStyle}>Chat</Link> */}
+            <Link onClick={() => setOpen(false)} href="https://wa.me/919985227139" className={navLinkStyle}>Chat</Link>
 {/* 
             <Link
               onClick={() => setOpen(false)}
