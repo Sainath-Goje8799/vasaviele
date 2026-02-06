@@ -278,45 +278,45 @@ export default function MotorsPage() {
         ))}
       </div>
 
-      {/* Full-Screen Modal */}
-      {selectedMotor && (
-  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4 overflow-auto">
-    <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden animate-fadeIn">
+{selectedMotor && (
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-end sm:items-center justify-center px-0 sm:px-4 overflow-y-auto">
+
+    <div className="relative w-full sm:max-w-6xl bg-white rounded-t-3xl sm:rounded-3xl shadow-2xl overflow-hidden animate-fadeIn">
 
       {/* CLOSE */}
       <button
         onClick={() => setSelectedMotor(null)}
-        className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-black/80 text-white text-lg sm:text-xl flex items-center justify-center"
       >
         ✕
       </button>
 
       {/* TOP STRIP */}
-      <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-black px-8 py-4 flex items-center justify-between">
-        <h2 className="text-xl font-bold text-white">
+      <div className="bg-gradient-to-r from-gray-700 via-gray-800 to-black px-4 sm:px-8 py-3 sm:py-4 flex flex-col sm:flex-row gap-1 sm:gap-0 sm:items-center sm:justify-between">
+        <h2 className="text-base sm:text-xl font-bold text-white">
           Sri Vasavi Electricals ⚡
         </h2>
-        <span className="text-sm font-semibold text-white/80">
+        <span className="text-xs sm:text-sm font-semibold text-white/80">
           Electric Motors & Industrial Equipment
         </span>
       </div>
 
       {/* CONTENT */}
-      <div className="grid lg:grid-cols-2 gap-12 p-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 p-4 sm:p-10">
 
         {/* IMAGE */}
         <div className="flex items-center justify-center">
-          <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-10 shadow-inner">
+          <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-4 sm:p-10 shadow-inner w-full">
             <Image
               src={selectedMotor.img}
               alt={selectedMotor.name}
               width={420}
               height={420}
-              className="rounded-xl hover:scale-105 transition"
+              className="w-full max-h-[260px] sm:max-h-[420px] object-contain rounded-xl"
             />
 
             {selectedMotor.tag && (
-              <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+              <span className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
                 {selectedMotor.tag}
               </span>
             )}
@@ -325,35 +325,39 @@ export default function MotorsPage() {
 
         {/* INFO */}
         <div>
-          <h1 className="text-3xl font-bold text-gray-900">
+          <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
             {selectedMotor.name}
           </h1>
 
-          <p className="mt-2 text-gray-500">
+          <p className="mt-1 sm:mt-2 text-xs sm:text-base text-gray-500">
             Reliable & high-performance motor for your application
           </p>
 
-          <div className="mt-5 flex items-center gap-4">
-            <span className="text-4xl font-extrabold text-gray-800">
+          <div className="mt-3 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-4">
+            <span className="text-2xl sm:text-4xl font-extrabold text-gray-800">
               {selectedMotor.price}
             </span>
-            <span className="text-sm text-gray-500">(Inclusive of taxes)</span>
+            <span className="text-xs sm:text-sm text-gray-500">
+              (Inclusive of taxes)
+            </span>
           </div>
 
-          <p className="mt-6 text-gray-700">{selectedMotor.desc}</p>
+          <p className="mt-3 sm:mt-6 text-sm sm:text-base text-gray-700">
+            {selectedMotor.desc}
+          </p>
 
           {/* FEATURES */}
           {selectedMotor.features && (
-            <div className="mt-8">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+            <div className="mt-5 sm:mt-8">
+              <h3 className="text-sm sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">
                 Key Features
               </h3>
 
-              <div className="grid grid-cols-2 gap-3 text-gray-600">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-gray-600">
                 {selectedMotor.features.map((f, i) => (
                   <div
                     key={i}
-                    className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm"
+                    className="flex items-center gap-2 bg-gray-50 border rounded-xl px-3 py-2 sm:px-4 sm:py-3 text-xs sm:text-sm"
                   >
                     <span className="text-green-600">✔</span>
                     {f}
@@ -365,11 +369,11 @@ export default function MotorsPage() {
 
           {/* SPECIFICATIONS */}
           {selectedMotor.specs && (
-            <div className="mt-6">
-              <h3 className="text-lg font-semibold mb-2 text-gray-800">
+            <div className="mt-4 sm:mt-6">
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 text-gray-800">
                 Specifications
               </h3>
-              <ul className="list-disc pl-5 text-gray-600">
+              <ul className="list-disc pl-5 text-xs sm:text-sm text-gray-600">
                 {selectedMotor.specs.map((spec, i) => (
                   <li key={i}>{spec}</li>
                 ))}
@@ -378,32 +382,32 @@ export default function MotorsPage() {
           )}
 
           {/* CTA */}
-          <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 justify-between">
-            <div className="text-sm text-gray-600">
+          <div className="mt-6 sm:mt-10 p-4 sm:p-6 bg-gray-50 border rounded-2xl flex flex-col sm:flex-row gap-4 justify-between">
+            <div className="text-xs sm:text-sm text-gray-600">
               📍 Mudhole Store  
               <br />
               ⚡ Installation guidance available
             </div>
 
-            <div className="flex gap-3">
+            <div className="grid grid-cols-2 gap-3">
               <a
                 href="tel:9985227139"
-                className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-black"
+                className="px-4 sm:px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold text-center"
               >
-                📞 Call Now
+                📞 Call
               </a>
 
               <a
                 href="https://wa.me/919985227139"
                 target="_blank"
-                className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
+                className="px-4 sm:px-6 py-3 bg-green-600 text-white rounded-xl font-semibold text-center"
               >
                 💬 WhatsApp
               </a>
             </div>
           </div>
 
-          <p className="mt-6 text-xs text-gray-500">
+          <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500">
             ✔ Shock protection • ✔ Overload safety • ✔ Trusted local store
           </p>
         </div>
@@ -411,6 +415,8 @@ export default function MotorsPage() {
     </div>
   </div>
 )}
+
+
     </div>
   );
 }

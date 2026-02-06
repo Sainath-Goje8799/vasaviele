@@ -283,6 +283,7 @@ export default function EmergencyElectricalPage() {
       </div>
 
       {/* Full Screen Modal */}
+      {/* Full Screen Modal */}
       {activeService && (
         <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4">
           <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">

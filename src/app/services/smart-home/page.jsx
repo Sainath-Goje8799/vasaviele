@@ -330,132 +330,101 @@ export default function SmartHomePage() {
           </div>
         ))}
       </div>
-{/* 🔥 FULL-SCREEN SMART HOME MODAL */}
+{/* 🔥 FULL-SCREEN MODAL */}
 {activeItem && (
-  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4 sm:px-6">
-    <div className="relative w-full max-w-3xl sm:max-w-4xl md:max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
-      
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex items-center justify-center px-4 overflow-y-auto">
+
+    <div className="relative w-full max-w-md sm:max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+
       {/* Close Button */}
       <button
         onClick={() => setActiveItem(null)}
-        className="absolute top-4 right-4 sm:top-5 sm:right-5 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/80 text-white text-lg sm:text-xl flex items-center justify-center hover:scale-110 transition"
+        className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/70 text-white text-lg flex items-center justify-center hover:scale-110 transition"
       >
         ✕
       </button>
 
-      {/* Header */}
-      <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 px-6 py-3 sm:px-8 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
-        <h2 className="text-lg sm:text-xl font-bold text-white">
-          Smart Home Systems ⚡
+      {/* Top Brand Strip */}
+      <div className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 px-4 py-2 sm:px-8 sm:py-4 flex justify-between items-center">
+        <h2 className="text-base sm:text-xl font-bold text-white">
+          Sri Vasavi Electricals ⚡
         </h2>
         <span className="text-xs sm:text-sm font-semibold text-white/90">
-          Advanced & Connected Devices
+          Installation & Smart Setup support
         </span>
       </div>
 
-      {/* Main Content */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-12 p-6 sm:p-10">
-        {/* Image Section */}
+      {/* Modal Content */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-10 p-3 sm:p-10">
+
+        {/* Image */}
         <div className="flex items-center justify-center">
-          <div className="relative bg-gradient-to-br from-indigo-200 to-purple-400 rounded-2xl p-6 sm:p-10 shadow-inner w-full max-w-[400px] sm:max-w-[420px]">
+          <div className="relative bg-gradient-to-br from-cyan-500 to-blue-700 rounded-xl p-4 sm:p-10 shadow-inner w-full">
             <Image
               src={activeItem.img}
               alt={activeItem.name}
-              width={420}
-              height={420}
-              className="rounded-xl transition-transform duration-300 hover:scale-105 w-full h-auto"
+              width={300}
+              height={300}
+              className="rounded-lg w-full max-h-[250px] sm:max-h-[420px] object-contain"
             />
-            {activeItem.badge && (
-              <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-green-600 text-white text-xs px-2 py-1 sm:px-3 sm:py-1 rounded-full font-semibold">
-                {activeItem.badge}
-              </span>
-            )}
           </div>
         </div>
 
-        {/* Info Section */}
+        {/* Details */}
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
-            {activeItem.name}
-          </h1>
+          <h1 className="text-xl sm:text-3xl font-bold text-gray-900">{activeItem.name}</h1>
+          <p className="mt-1 sm:mt-2 text-gray-500 text-xs sm:text-sm">{activeItem.desc}</p>
 
-          {activeItem.price && (
-            <div className="mt-3 sm:mt-4 flex items-center gap-3 sm:gap-4 flex-wrap">
-              <span className="text-2xl sm:text-4xl font-extrabold text-purple-600">
-                {activeItem.price}
-              </span>
-              <span className="text-xs sm:text-sm text-gray-500">
-                (Inclusive of taxes)
-              </span>
+          {/* Price */}
+          <div className="mt-2 sm:mt-5 flex items-center gap-2 sm:gap-4">
+            <span className="text-2xl sm:text-4xl font-extrabold text-blue-600">{activeItem.price}</span>
+            <span className="text-xs sm:text-sm text-gray-500">(Inclusive of taxes)</span>
+          </div>
+
+          {/* Features */}
+          <div className="mt-3 sm:mt-8">
+            <h3 className="text-sm sm:text-lg font-semibold mb-2 sm:mb-4 text-indigo-600">
+              Key Highlights
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-1 gap-1 sm:gap-3">
+              {(activeItem.details || []).map((item, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-1 sm:gap-2 bg-gray-50 border rounded-lg px-2 py-1 text-xs sm:text-sm font-medium text-gray-800"
+                >
+                  <span className="text-green-600">✔</span>
+                  {item}
+                </div>
+              ))}
             </div>
-          )}
+          </div>
 
-          {/* Key Highlights */}
-          {activeItem.highlights && activeItem.highlights.length > 0 && (
-            <div className="mt-4 sm:mt-6">
-              <h3 className="text-sm sm:text-lg font-semibold mb-1 sm:mb-2 text-indigo-600">
-                Key Highlights
-              </h3>
-              <ul className="list-disc list-inside text-gray-700 text-xs sm:text-sm">
-                {activeItem.highlights.map((h, i) => (
-                  <li key={i}>{h}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {/* Description */}
-          <p className="mt-4 sm:mt-6 text-gray-700 text-xs sm:text-sm leading-relaxed">
-            {activeItem.desc}
-          </p>
-
-          {/* Features / Details */}
-          {activeItem.details && activeItem.details.length > 0 && (
-            <div className="mt-6 sm:mt-8">
-              <h3 className="text-sm sm:text-lg font-semibold mb-2 sm:mb-4 text-indigo-600">
-                Features & Specifications
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-                {activeItem.details.map((d, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-2 bg-gray-50 border rounded-xl px-3 py-2 sm:px-4 sm:py-3 text-gray-800"
-                  >
-                    <span className="text-green-600">✔</span>
-                    {d}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* CTA Buttons */}
-          <div className="mt-6 sm:mt-10 p-4 sm:p-6 bg-gray-50 border rounded-2xl flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-start sm:items-center justify-between text-xs sm:text-sm">
-            <div className="text-gray-600">
-              📍 Available at our store  
-              <br />
-              ⚡ Installation & Smart Setup support
+          {/* CTA */}
+          <div className="mt-3 sm:mt-10 p-3 sm:p-6 bg-gray-50 border rounded-xl flex flex-col sm:flex-row gap-2 sm:gap-3 justify-between">
+            <div className="text-xs sm:text-sm text-gray-600 mb-2 sm:mb-0">
+              📍 Available at our Mudhole store <br /> ⚡ Installation & service support available
             </div>
 
-            <div className="flex gap-2 sm:gap-3 mt-2 sm:mt-0">
+            <div className="flex gap-2 sm:gap-3 flex-wrap">
               <a
                 href="tel:9985227139"
-                className="px-4 py-2 sm:px-6 sm:py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition text-xs sm:text-sm"
+                className="px-4 py-2 sm:px-6 sm:py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 text-xs sm:text-sm transition"
               >
                 📞 Call Now
               </a>
               <a
                 href="https://wa.me/919985227139"
                 target="_blank"
-                className="px-4 py-2 sm:px-6 sm:py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition text-xs sm:text-sm"
+                className="px-4 py-2 sm:px-6 sm:py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 text-xs sm:text-sm transition"
               >
                 💬 WhatsApp
               </a>
             </div>
           </div>
 
-          <p className="mt-4 sm:mt-6 text-xs text-gray-500">
-            ✔ High-quality • ✔ Reliable • ✔ Trusted smart home solutions
+          {/* Trust */}
+          <p className="mt-2 sm:mt-6 text-xs sm:text-sm text-gray-500">
+             ✔ High-quality • ✔ Reliable • ✔ Trusted smart home solutions
           </p>
         </div>
       </div>

@@ -322,133 +322,166 @@ export default function EarthingPage() {
       </div>
 
       {/* FULL SCREEN MODAL */}
-      {activeItem && (
-        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4 overflow-auto">
-          <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+     {activeItem && (
+  <div className="fixed inset-0 z-[999] bg-black/70 backdrop-blur-sm flex items-end sm:items-center justify-center">
 
-            {/* CLOSE */}
-            <button
-              onClick={() => setActiveItem(null)}
-              className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
-            >
-              ✕
-            </button>
+    {/* CARD */}
+    <div
+      className="
+        relative w-full sm:max-w-6xl bg-white
+        rounded-t-3xl sm:rounded-3xl
+        shadow-2xl overflow-hidden
+        max-h-[92vh] sm:max-h-none
+        flex flex-col
+      "
+    >
 
-            {/* TOP STRIP */}
-            <div className="bg-gradient-to-r from-slate-700 via-gray-800 to-black px-8 py-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold text-white">
-                Sri Vasavi Electricals ⚡
-              </h2>
-              <span className="text-sm font-semibold text-white/80">
-                Earthing & Grounding
+      {/* DRAG BAR (MOBILE ONLY) */}
+      <div className="sm:hidden flex justify-center py-2">
+        <div className="w-12 h-1.5 bg-gray-300 rounded-full" />
+      </div>
+
+      {/* TOP STRIP */}
+      <div className="bg-gradient-to-r from-slate-700 via-gray-800 to-black px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between">
+        <h2 className="text-sm sm:text-xl font-bold text-white">
+          Sri Vasavi Electricals ⚡
+        </h2>
+<button
+        onClick={() => setActiveItem(null)}
+        className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/70 text-white text-lg flex items-center justify-center hover:scale-110 transition"
+      >
+        ✕
+      </button>
+
+        <span className="hidden sm:block text-sm font-semibold text-white/80">
+          Earthing & Grounding
+        </span>
+      </div>
+
+      {/* SCROLLABLE CONTENT */}
+      <div className="flex-1 overflow-y-auto overscroll-contain px-4 sm:px-10 py-4 sm:py-10 pb-36 sm:pb-10">
+
+        <div className="grid sm:grid-cols-2 gap-6 sm:gap-12">
+
+          {/* IMAGE */}
+          <div className="flex items-center justify-center">
+            <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-4 sm:p-10 shadow-inner w-full">
+              <Image
+                src={activeItem.img}
+                alt={activeItem.name}
+                width={420}
+                height={420}
+                className="max-h-[220px] sm:max-h-none object-contain rounded-xl"
+              />
+
+              {activeItem.tag && (
+                <span className="absolute top-3 left-3 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                  {activeItem.tag}
+                </span>
+              )}
+            </div>
+          </div>
+
+          {/* INFO */}
+          <div>
+            <h1 className="text-xl sm:text-3xl font-bold text-gray-900">
+              {activeItem.name}
+            </h1>
+
+            <p className="mt-2 text-sm sm:text-base text-gray-500">
+              {activeItem.desc}
+            </p>
+
+            <div className="mt-4 sm:mt-5 flex items-center gap-3">
+              <span className="text-2xl sm:text-4xl font-extrabold text-gray-800">
+                {activeItem.price}
+              </span>
+              <span className="text-xs sm:text-sm text-gray-500">
+                (Inclusive of taxes)
               </span>
             </div>
 
-            {/* CONTENT */}
-            <div className="grid lg:grid-cols-2 gap-12 p-10">
+            {/* FEATURES */}
+            {activeItem.features && (
+              <div className="mt-6 sm:mt-8">
+                <h3 className="text-sm sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">
+                  Key Features
+                </h3>
 
-              {/* IMAGE */}
-              <div className="flex items-center justify-center">
-                <div className="relative bg-gradient-to-br from-gray-200 to-gray-400 rounded-2xl p-10 shadow-inner">
-                  <Image
-                    src={activeItem.img}
-                    alt={activeItem.name}
-                    width={420}
-                    height={420}
-                    className="rounded-xl hover:scale-105 transition"
-                  />
-                  {activeItem.tag && (
-                    <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                      {activeItem.tag}
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* INFO */}
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
-                  {activeItem.name}
-                </h1>
-                <p className="mt-2 text-gray-500">{activeItem.desc}</p>
-
-                <div className="mt-5 flex items-center gap-4">
-                  <span className="text-4xl font-extrabold text-gray-800">
-                    {activeItem.price}
-                  </span>
-                  <span className="text-sm text-gray-500">
-                    (Inclusive of taxes)
-                  </span>
-                </div>
-
-                {/* FEATURES */}
-                {activeItem.features && (
-                  <div className="mt-8">
-                    <h3 className="text-lg font-semibold mb-4 text-gray-800">
-                      Key Features
-                    </h3>
-                    <div className="grid grid-cols-2 gap-3 text-gray-600">
-                      {activeItem.features.map((f, i) => (
-                        <div
-                          key={i}
-                          className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm"
-                        >
-                          <span className="text-green-600">✔</span>
-                          {f}
-                        </div>
-                      ))}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                  {activeItem.features.map((f, i) => (
+                    <div
+                      key={i}
+                      className="flex items-center gap-2 bg-gray-50 border rounded-xl px-4 py-3 text-sm text-gray-700"
+                    >
+                      <span className="text-green-600">✔</span>
+                      {f}
                     </div>
-                  </div>
-                )}
-
-                {/* SPECS */}
-                {activeItem.specs && (
-                  <div className="mt-8">
-                    <h3 className="text-lg font-semibold mb-4 text-gray-800">
-                      Technical Specs
-                    </h3>
-                    <ul className="list-disc pl-5 text-gray-600">
-                      {activeItem.specs.map((s, i) => (
-                        <li key={i}>{s}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* CTA */}
-                <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 justify-between">
-                  <div className="text-sm text-gray-600">
-                    📍 Mudhole Store  
-                    <br />
-                    ⚡ Installation guidance available
-                  </div>
-
-                  <div className="flex gap-3">
-                    <a
-                      href="tel:9985227139"
-                      className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold hover:bg-black"
-                    >
-                      📞 Call Now
-                    </a>
-
-                    <a
-                      href="https://wa.me/919985227139"
-                      target="_blank"
-                      className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700"
-                    >
-                      💬 WhatsApp
-                    </a>
-                  </div>
+                  ))}
                 </div>
-
-                <p className="mt-6 text-xs text-gray-500">
-                  ✔ Trusted local store • ✔ Quality earthing solutions
-                </p>
               </div>
-            </div>
+            )}
+
+            {/* SPECS */}
+            {activeItem.specs && (
+              <div className="mt-6 sm:mt-8">
+                <h3 className="text-sm sm:text-lg font-semibold mb-3 sm:mb-4 text-gray-800">
+                  Technical Specs
+                </h3>
+                <ul className="list-disc pl-5 text-sm text-gray-600">
+                  {activeItem.specs.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            <p className="mt-6 text-xs text-gray-500">
+              ✔ Trusted local store • ✔ Quality earthing solutions
+            </p>
           </div>
         </div>
-      )}
+      </div>
+
+      {/* STICKY CTA – MOBILE ONLY */}
+      <div className="sm:hidden sticky bottom-0 bg-white border-t px-4 py-3 grid grid-cols-2 gap-3">
+        <a
+          href="tel:9985227139"
+          className="py-3 bg-gray-900 text-white rounded-xl font-semibold text-center"
+        >
+          📞 Call
+        </a>
+
+        <a
+          href="https://wa.me/919985227139"
+          target="_blank"
+          className="py-3 bg-green-600 text-white rounded-xl font-semibold text-center"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+
+      {/* DESKTOP CTA */}
+      <div className="hidden sm:flex px-10 pb-8 gap-4 justify-end">
+        <a
+          href="tel:9985227139"
+          className="px-6 py-3 bg-gray-900 text-white rounded-xl font-semibold"
+        >
+          📞 Call Now
+        </a>
+
+        <a
+          href="https://wa.me/919985227139"
+          target="_blank"
+          className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold"
+        >
+          💬 WhatsApp
+        </a>
+      </div>
+
     </div>
+  </div>
+)}
+</div>
   );
 }

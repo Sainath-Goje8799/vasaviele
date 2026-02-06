@@ -285,112 +285,112 @@ export default function DecorativePage() {
         ))}
       </div>
 
-      {/* 🔥 Full-screen Modal */}
-      {activeItem && (
-        <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4">
-          <div className="relative w-full max-w-6xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+     {/* 🔥 Full-screen Modal - Mobile Friendly */}
+{activeItem && (
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-2 sm:px-4">
+    <div className="relative w-full max-w-md sm:max-w-3xl md:max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden">
 
-            {/* Close Button */}
-            <button
-              onClick={() => setActiveItem(null)}
-              className="absolute top-5 right-5 z-20 w-11 h-11 rounded-full bg-black/80 text-white text-xl flex items-center justify-center hover:scale-110 transition"
-            >
-              ✕
-            </button>
+      {/* Close Button */}
+      <button
+        onClick={() => setActiveItem(null)}
+        className="absolute top-3 right-3 sm:top-5 sm:right-5 z-20 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-black/80 text-white text-lg sm:text-xl flex items-center justify-center hover:scale-110 transition"
+      >
+        ✕
+      </button>
 
-            {/* Top Brand Strip */}
-            <div className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 px-8 py-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold text-white">
-                Sri Vasavi Electricals ⚡
-              </h2>
-              <span className="text-sm font-semibold text-white/90">
-                Premium Decorative Lighting
-              </span>
-            </div>
+      {/* Top Brand Strip */}
+      <div className="bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 px-4 sm:px-8 py-3 sm:py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1 sm:gap-0">
+        <h2 className="text-lg sm:text-xl font-bold text-white">
+          Sri Vasavi Electricals ⚡
+        </h2>
+        <span className="text-xs sm:text-sm font-semibold text-white/90">
+          Premium Decorative Lighting
+        </span>
+      </div>
 
-            {/* Main Content */}
-            <div className="grid lg:grid-cols-2 gap-12 p-10">
+      {/* Main Content */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 p-4 sm:p-10">
 
-              {/* Image Showcase */}
-              <div className="flex items-center justify-center">
-                <div className="relative bg-gradient-to-br from-yellow-500 to-orange-700 rounded-2xl p-10 shadow-inner">
-                  <Image
-                    src={activeItem.img}
-                    alt={activeItem.name}
-                    width={420}
-                    height={420}
-                    className="rounded-xl transition-transform duration-300 hover:scale-105"
-                  />
-                  <span className="absolute top-4 left-4 bg-green-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
-                    Premium Quality
-                  </span>
-                </div>
-              </div>
-
-              {/* Product Info */}
-              <div>
-                <h1 className="text-3xl font-bold text-gray-900">
-                  {activeItem.name}
-                </h1>
-                <p className="mt-2 text-gray-500">{activeItem.desc}</p>
-
-                {/* Price */}
-                <div className="mt-5 flex items-center gap-4">
-                  <span className="text-4xl font-extrabold text-orange-600">
-                    {activeItem.price}
-                  </span>
-                  <span className="text-sm text-gray-500">(Inclusive of taxes)</span>
-                </div>
-
-                {/* Highlights */}
-                {activeItem.highlights && (
-                  <div className="mt-6">
-                    <h3 className="text-lg font-semibold mb-4 text-orange-600">
-                      Key Highlights
-                    </h3>
-                    <ul className="list-disc list-inside text-gray-700">
-                      {activeItem.highlights.map((h, i) => (
-                        <li key={i}>{h}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-
-                {/* CTA Bar */}
-                <div className="mt-10 p-6 bg-gray-50 border rounded-2xl flex flex-wrap gap-4 items-center justify-between">
-                  <div className="text-sm text-gray-600">
-                    📍 Available at our Mudhole store  
-                    <br />
-                    ⚡ Professional installation support
-                  </div>
-
-                  <div className="flex gap-3">
-                    <a
-                      href="tel:9985227139"
-                      className="px-6 py-3 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition"
-                    >
-                      📞 Call Now
-                    </a>
-
-                    <a
-                      href="https://wa.me/919985227139"
-                      target="_blank"
-                      className="px-6 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition"
-                    >
-                      💬 WhatsApp
-                    </a>
-                  </div>
-                </div>
-
-                {/* Trust */}
-                <p className="mt-6 text-xs text-gray-500">
-                  ✔ Premium Quality • ✔ Fire Resistant • ✔ Trusted Local Store
-                </p>
-              </div>
-            </div>
+        {/* Image Showcase */}
+        <div className="flex items-center justify-center">
+          <div className="relative bg-gradient-to-br from-yellow-500 to-orange-700 rounded-2xl p-6 sm:p-10 shadow-inner w-full max-w-[350px] sm:max-w-[420px]">
+            <Image
+              src={activeItem.img}
+              alt={activeItem.name}
+              width={420}
+              height={420}
+              className="rounded-xl w-full h-auto transition-transform duration-300 hover:scale-105"
+            />
+            <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-green-600 text-white text-xs sm:text-sm px-2 sm:px-3 py-1 rounded-full font-semibold">
+              Premium Quality
+            </span>
           </div>
         </div>
-      )}
+
+        {/* Product Info */}
+        <div>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+            {activeItem.name}
+          </h1>
+          <p className="mt-2 text-gray-500 text-sm sm:text-base">{activeItem.desc}</p>
+
+          {/* Price */}
+          <div className="mt-4 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-4">
+            <span className="text-2xl sm:text-4xl font-extrabold text-orange-600">
+              {activeItem.price}
+            </span>
+            <span className="text-xs sm:text-sm text-gray-500">(Inclusive of taxes)</span>
+          </div>
+
+          {/* Highlights */}
+          {activeItem.highlights && (
+            <div className="mt-4 sm:mt-6">
+              <h3 className="text-sm sm:text-lg font-semibold mb-2 sm:mb-4 text-orange-600">
+                Key Highlights
+              </h3>
+              <ul className="list-disc list-inside text-gray-700 text-xs sm:text-sm">
+                {activeItem.highlights.map((h, i) => (
+                  <li key={i}>{h}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {/* CTA Bar */}
+          <div className="mt-6 sm:mt-10 p-4 sm:p-6 bg-gray-50 border rounded-2xl flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-start sm:items-center justify-between text-xs sm:text-sm">
+            <div className="text-gray-600">
+              📍 Available at our Mudhole store  
+              <br />
+              ⚡ Professional installation support
+            </div>
+
+            <div className="flex gap-2 sm:gap-3 mt-2 sm:mt-0 w-full sm:w-auto">
+              <a
+                href="tel:9985227139"
+                className="flex-1 sm:flex-none px-4 sm:px-6 py-2 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition text-center"
+              >
+                📞 Call Now
+              </a>
+
+              <a
+                href="https://wa.me/919985227139"
+                target="_blank"
+                className="flex-1 sm:flex-none px-4 sm:px-6 py-2 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition text-center"
+              >
+                💬 WhatsApp
+              </a>
+            </div>
+          </div>
+
+          {/* Trust */}
+          <p className="mt-4 sm:mt-6 text-xs sm:text-sm text-gray-500">
+            ✔ Premium Quality • ✔ Fire Resistant • ✔ Trusted Local Store
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
+)}
+</div>
   );
 }
