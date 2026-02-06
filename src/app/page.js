@@ -3,44 +3,45 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { FaSearch } from "react-icons/fa";
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <main className="relative min-h-screen bg-rose-50 font-sans">
+    <main className="min-h-screen bg-rose-50 font-sans">
 
-      
-      {/* 🦸 Hero Section */}
+      {/* HERO SECTION */}
       <section className="bg-gradient-to-br from-pink-500 via-rose-500 to-purple-600 text-white">
-        <div className="max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-5 py-20 sm:py-28 grid md:grid-cols-2 gap-10 items-center">
+          
           <div>
-            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
               Sri Vasavi Electricals ⚡
             </h1>
-            <p className="mt-6 text-lg text-pink-100">
+
+            <p className="mt-5 text-base sm:text-lg text-pink-100">
               Reliable electrical services for homes, shops, and offices in
               Mudhole & Nirmal. Safe work. Fast service. Honest pricing.
             </p>
 
-            <div className="mt-8 flex gap-4 flex-wrap">
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
                 href="/services"
-                className="bg-white text-pink-600 px-6 py-3 rounded-xl font-semibold hover:bg-pink-100 transition"
+                className="bg-white text-pink-600 px-6 py-3 rounded-xl font-semibold text-center hover:bg-pink-100 transition"
               >
                 Our Services
               </Link>
               <Link
                 href="/about"
-                className="border border-white px-6 py-3 rounded-xl hover:bg-white hover:text-pink-600 transition"
+                className="border border-white px-6 py-3 rounded-xl text-center hover:bg-white hover:text-pink-600 transition"
               >
                 About Us
               </Link>
             </div>
           </div>
 
-          <div className="hidden md:block">
+          {/* ICON BOX (HIDDEN ON MOBILE) */}
+          <div className="hidden md:flex justify-center">
             <div className="bg-white/20 rounded-3xl p-12 text-center text-6xl backdrop-blur">
               ⚡🏠🔌
               <p className="text-lg mt-4 text-pink-100">
@@ -51,13 +52,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ⭐ Why Choose Us */}
-      <section className="max-w-7xl mx-auto px-6 py-24 bg-white">
-        <h2 className="text-3xl font-bold text-center text-slate-800">
+      {/* WHY CHOOSE US */}
+      <section className="max-w-7xl mx-auto px-5 py-20 bg-white">
+        <h2 className="text-2xl sm:text-3xl font-bold text-center text-slate-800">
           Why Choose Sri Vasavi Electricals?
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
           {[
             ["⚡", "Expert Electricians"],
             ["🛡️", "Safety First Work"],
@@ -66,7 +67,7 @@ export default function HomePage() {
           ].map(([icon, title], i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-1 hover:shadow-xl transition"
+              className="bg-white rounded-2xl shadow-md p-6 text-center hover:-translate-y-1 hover:shadow-xl transition"
             >
               <div className="text-4xl">{icon}</div>
               <h3 className="mt-4 font-semibold text-lg text-slate-700">
@@ -77,40 +78,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 📊 Trust Stats */}
-      <section className="bg-gradient-to-r from-rose-100 to-pink-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+      {/* TRUST STATS */}
+      <section className="bg-gradient-to-r from-rose-100 to-pink-100 py-16 px-5">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
           {[
             ["6+", "Years of Experience"],
             ["1000+", "Completed Works"],
             ["24/7", "Emergency Support"],
           ].map(([num, label], i) => (
-            <div key={i} className="bg-white rounded-2xl p-8 shadow-md">
-              <h3 className="text-4xl font-bold text-pink-600">{num}</h3>
+            <div key={i} className="bg-white rounded-2xl p-6 shadow-md">
+              <h3 className="text-3xl sm:text-4xl font-bold text-pink-600">
+                {num}
+              </h3>
               <p className="text-slate-600 mt-2">{label}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 📍 Service Area */}
-      <section className="max-w-5xl mx-auto py-24 px-6 text-center bg-white">
-        <h2 className="text-3xl font-bold text-slate-800">
+      {/* SERVICE AREA */}
+      <section className="max-w-5xl mx-auto py-20 px-5 text-center bg-white">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
           Service Areas
         </h2>
-        <p className="text-slate-600 mt-4">
+        <p className="text-slate-600 mt-4 text-sm sm:text-base">
           Serving Mudhole, Nirmal, and nearby Telangana areas with dependable
           electrical solutions.
         </p>
       </section>
 
-      {/* About Section */}
-      <section className="bg-rose-50 py-24 px-6">
+      {/* ABOUT */}
+      <section className="bg-rose-50 py-20 px-5">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold text-slate-800">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
             About Sri Vasavi Electricals
           </h2>
-          <p className="text-slate-600">
+          <p className="text-slate-600 text-sm sm:text-base">
             Founded by <span className="font-semibold">Vinay Kumar Deshmukh</span>,
             serving for over 6 years with safe, reliable electrical solutions.
           </p>
@@ -123,26 +126,30 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 px-6 text-center bg-gradient-to-br from-pink-500 to-purple-600 text-white">
-        <h2 className="text-3xl font-bold">Need Electrical Service?</h2>
-        <p className="mt-3 mb-8 text-pink-100">
+      {/* CTA */}
+      <section className="py-20 px-5 text-center bg-gradient-to-br from-pink-500 to-purple-600 text-white">
+        <h2 className="text-2xl sm:text-3xl font-bold">
+          Need Electrical Service?
+        </h2>
+        <p className="mt-3 mb-8 text-pink-100 text-sm sm:text-base">
           Call or chat with Sri Vasavi Electricals for fast and trusted service.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link
-            href="/chatapp"
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://wa.me/919985227139"
+            target="_blank"
             className="px-6 py-3 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-100 transition"
           >
-            Chat with Us
-          </Link>
-         <a
-        href="tel:9985227139"
-         className="px-6 py-3 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-100 transition"
-      >
-        Call Now
-      </a>
+            💬 WhatsApp Chat
+          </a>
 
+          <a
+            href="tel:9985227139"
+            className="px-6 py-3 bg-white text-pink-600 font-semibold rounded-xl hover:bg-pink-100 transition"
+          >
+            📞 Call Now
+          </a>
         </div>
       </section>
     </main>

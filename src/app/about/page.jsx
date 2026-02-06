@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gray-50 px-4 py-10">
+    <main className="min-h-screen bg-gradient-to-br from-yellow-50 via-amber-50 to-orange-50 px-4 py-10">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 text-center">
 
         {/* Back Link */}
         <Link
           href="/"
-          className="text-yellow-500 font-medium mb-4 inline-block"
+          className="text-yellow-600 font-medium mb-4 inline-block"
         >
           ← Back to Home
         </Link>
@@ -53,12 +53,14 @@ export default function AboutPage() {
 
         {/* Call to Action */}
         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/chatapp"
-            className="px-6 py-3 rounded-xl bg-yellow-500 text-gray-900 font-medium hover:bg-yellow-600 transition"
+          <a
+            href="https://wa.me/919985227139"
+            target="_blank"
+            className="px-4 sm:px-6 py-3 bg-yellow-600 text-white rounded-xl font-semibold text-center"
           >
-            Chat with Us
-          </Link>
+            chat with us
+          </a>
+
           <a
             href="tel:9985227139"
             className="px-6 py-3 rounded-xl border border-gray-300 text-gray-700 font-medium hover:bg-gray-100 transition"
