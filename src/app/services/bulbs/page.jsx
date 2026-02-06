@@ -346,21 +346,21 @@ export default function BulbsPage() {
 
      {/* ULTRA PREMIUM PRODUCT VIEW */}
 {activeBulb && (
-  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-lg flex items-center justify-center px-4 overflow-y-auto">
+  <div className="fixed inset-0 z-[999] bg-black/90 backdrop-blur-md flex items-center justify-center px-4 overflow-y-auto">
 
-    <div className="relative w-full max-w-3xl sm:max-w-5xl bg-white rounded-3xl shadow-2xl overflow-hidden">
+    <div className="relative w-full max-w-md sm:max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden">
 
       {/* CLOSE BUTTON */}
       <button
         onClick={() => setActiveBulb(null)}
-        className="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-black/80 text-white text-lg flex items-center justify-center hover:scale-110 transition"
+        className="absolute top-3 right-3 z-20 w-9 h-9 rounded-full bg-black/70 text-white text-lg flex items-center justify-center hover:scale-110 transition"
       >
         ✕
       </button>
 
       {/* TOP BRAND STRIP */}
-      <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-6 py-3 flex items-center justify-between">
-        <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+      <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 px-4 py-2 flex items-center justify-between">
+        <h2 className="text-base sm:text-lg font-bold text-gray-900">
           Sri Vasavi Electricals ⚡
         </h2>
         <span className="text-xs sm:text-sm font-semibold text-gray-800">
@@ -369,21 +369,21 @@ export default function BulbsPage() {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 p-4 sm:p-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 p-3 sm:p-8">
 
         {/* IMAGE SHOWCASE */}
         <div className="flex items-center justify-center">
-          <div className="relative bg-gradient-to-br from-violet-500 to-pink-600 rounded-2xl p-6 sm:p-10 shadow-inner w-full">
+          <div className="relative bg-gradient-to-br from-violet-500 to-pink-600 rounded-xl p-4 sm:p-8 shadow-inner w-full">
             <Image
               src={activeBulb.img}
               alt={activeBulb.name}
-              width={420}
-              height={420}
-              className="rounded-xl transition-transform duration-300 hover:scale-105 w-full h-auto object-contain"
+              width={300}
+              height={300}
+              className="rounded-lg w-full max-h-[250px] object-contain transition-transform duration-300 hover:scale-105"
             />
 
             {/* Badge */}
-            <span className="absolute top-3 left-3 bg-green-600 text-white text-xs px-2 py-1 rounded-full font-semibold">
+            <span className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full font-semibold">
               Best Seller
             </span>
           </div>
@@ -391,39 +391,39 @@ export default function BulbsPage() {
 
         {/* PRODUCT INFO */}
         <div>
-          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900">
             {activeBulb.name}
           </h1>
 
-          <p className="mt-2 text-gray-500 text-sm sm:text-base">
+          <p className="mt-1 text-gray-500 text-xs sm:text-sm">
             High-quality lighting solution for home & commercial use
           </p>
 
           {/* Price */}
-          <div className="mt-4 sm:mt-5 flex flex-wrap items-center gap-2 sm:gap-4">
-            <span className="text-2xl sm:text-4xl font-extrabold text-green-600">
+          <div className="mt-3 sm:mt-4 flex flex-wrap items-center gap-1 sm:gap-3">
+            <span className="text-xl sm:text-3xl font-extrabold text-green-600">
               {activeBulb.price}
             </span>
-            <span className="text-xs sm:text-sm text-gray-500">
+            <span className="text-xs text-gray-500">
               (Inclusive of taxes)
             </span>
           </div>
 
           {/* Description */}
-          <p className="mt-4 sm:mt-6 text-amber-400 leading-relaxed text-sm sm:text-base">
+          <p className="mt-2 sm:mt-4 text-amber-400 leading-relaxed text-xs sm:text-sm">
             {activeBulb.desc}
           </p>
 
           {/* FEATURES GRID */}
-          <div className="mt-6 sm:mt-8">
-            <h3 className="text-md sm:text-lg font-semibold mb-2 sm:mb-4 text-red-400">
+          <div className="mt-3 sm:mt-6">
+            <h3 className="text-sm sm:text-base font-semibold mb-2 sm:mb-3 text-red-400">
               Specifications & Features
             </h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 text-green-800">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-2 text-green-800">
               {activeBulb.details.map((item, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-2 bg-gray-50 border rounded-xl px-3 py-2 text-xs sm:text-sm font-medium"
+                  className="flex items-center gap-1 bg-gray-50 border rounded-lg px-2 py-1 text-xs sm:text-sm font-medium"
                 >
                   <span className="text-green-600">✔</span>
                   {item}
@@ -433,22 +433,22 @@ export default function BulbsPage() {
           </div>
 
           {/* CTA BAR */}
-          <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-gray-50 border rounded-2xl flex flex-col sm:flex-row flex-wrap gap-3 justify-between">
+          <div className="mt-4 sm:mt-6 p-3 sm:p-4 bg-gray-50 border rounded-xl flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3 justify-between">
             <div className="text-xs sm:text-sm text-pink-600 mb-2 sm:mb-0">
-              📍 Available at our Mudhole store <br /> ⏰ Same-day service & support
+              📍 Available at Mudhole store <br /> ⏰ Same-day service & support
             </div>
 
             <div className="flex gap-2 sm:gap-3 flex-wrap">
               <a
                 href="tel:9985227139"
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-yellow-500 rounded-xl font-semibold hover:bg-yellow-600 transition text-xs sm:text-sm"
+                className="px-4 py-2 bg-yellow-500 rounded-xl font-semibold hover:bg-yellow-600 text-xs sm:text-sm transition"
               >
                 📞 Call Now
               </a>
               <a
                 href="https://wa.me/919985227139"
                 target="_blank"
-                className="px-4 sm:px-6 py-2 sm:py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition text-xs sm:text-sm"
+                className="px-4 py-2 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 text-xs sm:text-sm transition"
               >
                 💬 WhatsApp
               </a>
@@ -456,7 +456,7 @@ export default function BulbsPage() {
           </div>
 
           {/* TRUST */}
-          <p className="mt-4 text-xs sm:text-sm text-gray-500">
+          <p className="mt-2 sm:mt-4 text-xs sm:text-sm text-gray-500">
             ✔ 6+ years experience • ✔ Genuine products • ✔ Trusted local electrical store
           </p>
         </div>
